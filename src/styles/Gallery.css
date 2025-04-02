@@ -1,0 +1,138 @@
+.gallery-section {
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+/* ✅ Unified Title Style */
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #EB2223;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ✅ Unified Subtitle Style */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* === Grid with Clean Cells === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0;
+  max-width: 1400px;
+  margin: auto;
+  border: 2px solid #EB2223;
+}
+
+.gallery-tile {
+  border: 1px solid #EB2223;
+  padding: 12px;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-tile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: block;
+}
+
+/* Hover Effects */
+.gallery-tile:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.gallery-tile:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay */
+.tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 227, 224, 0.6); /* subtle red tone */
+  color: #EB2223;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-tile:hover .tile-overlay {
+  opacity: 1;
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .gallery-tile img {
+    height: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .gallery-section{
+    padding-top: 0px;
+    padding-bottom: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-tile img {
+    height: 180px;
+  }
+}

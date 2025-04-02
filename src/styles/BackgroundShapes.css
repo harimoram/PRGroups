@@ -1,0 +1,28 @@
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Keeps it in the background */
+  }
+  
+  .floating-circle {
+    position: absolute;
+    opacity: 0.6;
+    animation: floatAnimation linear infinite alternate;
+  }
+  
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(30px) scale(1.1);
+    }
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+  }
+  

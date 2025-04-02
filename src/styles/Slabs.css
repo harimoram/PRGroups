@@ -1,0 +1,174 @@
+.slabs-section {
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+/* ✅ Consistent flat color (red) title, no gradient */
+.slabs-section .section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #EB2223;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ✅ Matching subtitle styling */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* Slab Cards */
+.slabs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.slab-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 40px;
+  border-radius: 15px;
+  border: solid 2px #F7A399;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.slab-box:hover {
+  box-shadow: 0 12px 30px rgba(235, 34, 35, 0.15);
+  transform: scale(1.01);
+}
+
+/* Reverse alternate layout */
+@media (min-width: 769px) {
+  .slab-box:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.slab-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slab-image {
+  width: 350px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.slab-content {
+  flex: 2;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.slab-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.slab-description {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* ===============================
+   Responsive Adjustments
+=============================== */
+@media (max-width: 1024px) {
+  .slabs-section .section-title {
+    font-size: 2.5rem;
+  }
+
+  .slab-box {
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .slab-title {
+    font-size: 1.8rem;
+  }
+
+  .slab-description {
+    font-size: 1.15rem;
+  }
+
+  .slab-image {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slab-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 25px;
+  }
+
+  .slab-content {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .slab-image {
+    width: 90%;
+  }
+
+  .slab-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  
+.slabs-section{
+  padding-top: 0px;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+  .slabs-section .section-title {
+    font-size: 1.8rem;
+  }
+
+  .slab-box {
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .slab-title {
+    font-size: 1.5rem;
+  }
+
+  .slab-description {
+    font-size: 0.95rem;
+  }
+
+  .slab-image {
+    width: 95%;
+  }
+}

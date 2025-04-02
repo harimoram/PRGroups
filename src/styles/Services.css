@@ -1,0 +1,122 @@
+/* Services Section */
+.services-section {
+    width: 100%;
+    padding: 20px 5%;
+    text-align: center;
+  }
+  
+  /* Section Title & Subtitle */
+  .section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+  
+  /* Services Container */
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Service Card */
+  .service-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 1.4s ease-in-out;
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover Effects */
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .service-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Service Info */
+  .service-info {
+    padding: 20px;
+  }
+  
+  .service-info h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .service-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Get a Quote Button */
+  .quote-btn {
+    background: linear-gradient(145deg, #f1c40f, #e67e22);
+    color: white;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 40px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .quote-btn:hover {
+    background: linear-gradient(145deg, #e67e22, #f1c40f);
+    transform: scale(1.1);
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .services-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-card {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,190 @@
+/* ===============================
+   📐 Main Section Layout
+=============================== */
+.single-project-section {
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #EB2223; /* brand red */
+  font-family: 'Playfair Display', serif;
+}
+
+/* ===============================
+   📦 Project Grid
+=============================== */
+.single-project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* ===============================
+   🧱 Project Card
+=============================== */
+.single-project-card {
+  width: 100%;
+  height: 320px;
+  border-radius: 16px;
+  border: solid 2px #EF6351;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.single-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.single-project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* ===============================
+   🌒 Overlay Info
+=============================== */
+.overlay-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 24px 30px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.single-project-card:hover .overlay-info {
+  opacity: 1;
+}
+
+.overlay-info h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.overlay-info h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #EF6351; /* gold */
+  margin-bottom: 6px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.project-location {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #eee;
+  margin-bottom: 14px;
+}
+
+.overlay-info p {
+  font-size: 1rem;
+  max-width: 85%;
+  color: #f0f0f0;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* ===============================
+   📱 Responsive Media Queries
+=============================== */
+
+@media (max-width: 1024px) {
+  .single-project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    font-size: 2.2rem;
+  }
+
+  .single-project-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .single-project-card {
+    height: 280px;
+  }
+
+  .overlay-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .overlay-info h4 {
+    font-size: 1rem;
+  }
+
+  .overlay-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+.single-project-section{
+  padding-top: 0px;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+  .section-heading {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+
+  .single-project-card {
+    height: 240px;
+  }
+
+  .overlay-info {
+    padding: 16px 20px;
+  }
+
+  .overlay-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .overlay-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .overlay-info p {
+    font-size: 0.85rem;
+    max-width: 95%;
+  }
+}
