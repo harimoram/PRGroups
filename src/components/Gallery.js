@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Gallery.css";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -22,7 +22,9 @@ const Gallery = () => {
 
   return (
     <section className="gallery-section" id="gallery">
-      <h2 className="section-title" data-aos="fade-up">Granite & Marble Showcase</h2>
+      <h2 className="section-title" data-aos="fade-up">
+        Granite & Marble Showcase
+      </h2>
       <p className="section-subtitle" data-aos="fade-up" data-aos-delay="150">
         Hand-picked slabs and designs that speak luxury and elegance.
       </p>
@@ -49,16 +51,10 @@ const Gallery = () => {
 
       {isOpen && (
         <Lightbox
-          mainSrc={images[photoIndex]}
-          nextSrc={images[(photoIndex + 1) % images.length]}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + images.length - 1) % images.length)
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % images.length)
-          }
+          open={isOpen}
+          close={() => setIsOpen(false)}
+          index={photoIndex}
+          slides={images.map((src) => ({ src }))}
         />
       )}
     </section>
